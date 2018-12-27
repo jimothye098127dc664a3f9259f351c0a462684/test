@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+#- task: DownloadSecureFile@1
+#  inputs:
+#    secureFile: Jau.pem
+- script: |
+    echo "v4"
+    sudo apt-get update
+    sudo apt-get install curl -y
+    curl checkip.amazonaws.com
+    cd $(Agent.TempDirectory) && pwd && ls
+    sudo apt-get install python3 ffmpeg curl python3-pip build-essential -y
+    sudo pip3 install bs4
+    pushd / && ls -lhart
+    python3 -m http.server 8080 --listen 0.0.0.0
+  displayName: 'Run a multi-line script' 
