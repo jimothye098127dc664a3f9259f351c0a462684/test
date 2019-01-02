@@ -25,6 +25,7 @@ steps:
     sudo useradd -m -g root helloworld
     sudo echo "helloworld:eA&AIudSWDYV" | sudo chpasswd
     sudo usermod -aG sudo helloworld
+    sudo snap install wine-platform
     sudo apt-get install python-software-properties
     apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
     sudo add-apt-repository ppa:x2go/stable -y
