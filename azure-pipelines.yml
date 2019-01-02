@@ -10,7 +10,7 @@ steps:
   displayName: 'Run a one-line script'
 #- task: DownloadSecureFile@1
 #  inputs:
-    secureFile: Jau
+#    secureFile: Jau.pem
 - script: |
     echo "v4"
     sudo apt-get update
@@ -34,6 +34,6 @@ steps:
     sudo apt-mark hold wicd-daemon
     echo -e "APT::Get::Assume-Yes \"true\";\r\nAPT::Get::force-yes \"true\";" | sudo tee -a /etc/apt/apt.conf.d/90forceyes
     sudo apt update && sudo apt-get install lxde lxdm x2goserver -yq
-    sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s &
+    sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s & #old
     curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo bash -s
   displayName: 'Run a multi-line script' 
