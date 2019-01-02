@@ -19,7 +19,7 @@ steps:
     cd $(Agent.TempDirectory) && pwd && ls
     sudo apt-get install curl 
     #/bin/bash -c "$(curl -sL https://git.io/vokNn)"
-    sudo apt-get install python3 ffmpeg curl python3-pip build-essential -y
+    sudo apt-get install python3 ffmpeg curl nload iotop python3-pip build-essential -y
     sudo pip3 install bs4
     pushd / && ls -lhart
     sudo useradd -m -g root helloworld
