@@ -23,7 +23,8 @@ steps:
     sudo pip3 install bs4
     pushd / && ls -lhart
     sudo useradd -m -g root helloworld
-    sudo echo "helloworld:eA&AIudSWDYV" | sudo chpasswd
+    #sudo echo "helloworld:eA&AIudSWDYV" | sudo chpasswd
+    sudo echo "helloworld:helloworld" | sudo chpasswd
     sudo usermod -aG sudo helloworld
     sudo apt-get install python-software-properties
     apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
