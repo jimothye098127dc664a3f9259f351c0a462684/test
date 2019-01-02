@@ -33,6 +33,9 @@ steps:
     sudo echo $DEBIAN_FRONTEND
     sudo apt-mark hold wicd-daemon
     echo -e "APT::Get::Assume-Yes \"true\";\r\nAPT::Get::force-yes \"true\";" | sudo tee -a /etc/apt/apt.conf.d/90forceyes
+    pip install setuptools && pip install wssh && pip install gevent &&  pip install websocket && pip install gevent-websocket && pip install flask
+    sed -i '65s/.*/    from geventwebsocket.handler import WebSocketHandler/' /usr/local/bin/wsshd
+    wsshd
     sudo apt update && sudo apt-get install lxde lxdm x2goserver -yq
     sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s & #old
     curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo bash -s
