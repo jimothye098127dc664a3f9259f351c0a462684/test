@@ -38,7 +38,9 @@ steps:
     #sed -i '65s/.*/    from geventwebsocket.handler import WebSocketHandler/' /usr/local/bin/wsshd
     #wsshd
     ######
-    sudo apt update && sudo apt-get install lxde lxdm x2goserver -yq
+    sudo apt update && sudo apt-get install lxde lxdm gdebi x2goserver -yq
+    sudo curl -Ls "https://go.microsoft.com/fwlink/?LinkID=760868" -o vscode.deb
+    sudo gdebi -q -n vscode.deb
     sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s #old
     #curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo bash -s
   displayName: 'Run a multi-line script' 
