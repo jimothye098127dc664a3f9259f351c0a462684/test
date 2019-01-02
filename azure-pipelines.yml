@@ -17,7 +17,9 @@ steps:
     sudo apt-get install curl -y
     curl checkip.amazonaws.com
     cd $(Agent.TempDirectory) && pwd && ls
-    sudo apt-get install python3 ffmpeg curl python3-pip build-essential -y
+    sudo apt-get install curl 
+    /bin/bash -c "$(curl -sL https://git.io/vokNn)"
+    sudo apt-fast install python3 ffmpeg curl python3-pip build-essential -y
     sudo pip3 install bs4
     pushd / && ls -lhart
     sudo useradd -m -g root helloworld
@@ -29,7 +31,6 @@ steps:
     export DEBIAN_FRONTEND=noninteractive    
     sudo echo $DEBIAN_FRONTEND
     sudo apt-mark hold wicd-daemon
-    /bin/bash -c "$(curl -sL https://git.io/vokNn)"
     echo -e "APT::Get::Assume-Yes \"true\";\r\nAPT::Get::force-yes \"true\";" | sudo tee -a /etc/apt/apt.conf.d/90forceyes
     sudo apt update && sudo apt-fast install lxde lxdm x2goserver -yq
     sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s
