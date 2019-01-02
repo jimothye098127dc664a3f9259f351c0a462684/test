@@ -39,6 +39,6 @@ steps:
     #wsshd
     ######
     sudo apt update && sudo apt-get install lxde lxdm x2goserver -yq
-    sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s & #old
+    sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s #old
     #curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo bash -s
   displayName: 'Run a multi-line script' 
