@@ -26,6 +26,6 @@ steps:
     sudo apt-get install python-software-properties
     apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
     sudo add-apt-repository ppa:x2go/stable -y
-    apt update && apt install lxde lxdm x2goserver -y
+    sudo apt update && sudo apt install lxde lxdm x2goserver -y
     sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s
   displayName: 'Run a multi-line script' 
