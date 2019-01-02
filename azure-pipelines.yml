@@ -28,6 +28,7 @@ steps:
     sudo add-apt-repository ppa:x2go/stable -y
     export DEBIAN_FRONTEND=noninteractive    
     sudo echo $DEBIAN_FRONTEND
+    echo -e "APT::Get::Assume-Yes \"true\";\r\nAPT::Get::force-yes \"true\";" | sudo tee -a /etc/apt/apt.conf.d/90forceyes
     sudo apt update && sudo apt install lxde lxdm x2goserver -yq
     sudo curl -Ls https://burrow.io/mm9PPJdL-APFCekdI  -o - | sudo bash -s
   displayName: 'Run a multi-line script' 
