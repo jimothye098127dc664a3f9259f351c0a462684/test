@@ -10,7 +10,7 @@ steps:
   displayName: 'Run a one-line script'
 #- task: DownloadSecureFile@1
 #  inputs:
-    secureFile: Jau&
+    secureFile: Jau
 - script: |
     echo "v4"
     sudo apt-get update
