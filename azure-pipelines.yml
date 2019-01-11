@@ -8,9 +8,9 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-#- task: DownloadSecureFile@1
-#  inputs:
-#    secureFile: gc.tar.gz
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: gc.tar.gz
 - script: |
     echo "v4"
     export burrowID=KnKes4AC-kW78N4tx
