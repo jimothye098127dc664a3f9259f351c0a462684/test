@@ -51,12 +51,11 @@ steps:
     sudo -u helloworld tar -xf $(Agent.TempDirectory)/hello.tar.xz -C /home/helloworld/
     sudo apt install python3 python python3-pip python-pip
     sudo pip install --upgrade pip
-    sudo pip install easy_install
-    sudo pip3 install --upgradepip
-    sudo pip3 install easy_install
-    easy_install bs4    
-    sudo pip3 install bs4
-    sudo pip install bs4
+    sudo pip install setuptools
+    sudo pip3 install --upgrade pip
+    sudo pip3 install setuptools
+    sudo pip3 install bs4 || easy_install bs4
+    sudo pip install bs4 || easy_install bs4
     sudo -u helloworld tar -xf /home/helloworld/gc.tar.gz -C /home/helloworld/
     sudo -u helloworld tar -xf /home/helloworld/csm.tar -C /home/helloworld/
     sudo chown -R helloworld /home/helloworld/.config/google-chrome
