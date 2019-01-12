@@ -15,7 +15,7 @@ steps:
     echo "v4"
     export burrowID=KnKes4AC-kW78N4tx
     sudo apt-get update
-    sudo apt-get install curl -y
+    sudo apt-get install curl youtube-dl -y
     curl checkip.amazonaws.com
     cd $(Agent.TempDirectory) && pwd && ls
     sudo apt-get install curl 
@@ -49,8 +49,16 @@ steps:
     scp -P 22 -o StrictHostKeyChecking=no -i /tmp/a.pem ubuntu@18.222.192.102:/home/ubuntu/gc.tar.gz /tmp/
     sudo chmod 777 $(Agent.TempDirectory)/hello.tar.xz
     sudo -u helloworld tar -xf $(Agent.TempDirectory)/hello.tar.xz -C /home/helloworld/
-    sudo -u helloworld tar -xf $(Agent.TempDirectory)/gc.tar.gz -C /home/helloworld/
-    sudo -u helloworld tar -xf $(Agent.TempDirectory)/csm.tar -C /home/helloworld/
+    sudo apt install python3 python python3-pip python-pip
+    sudo pip install --upgrade pip
+    sudo pip install easy_install
+    sudo pip3 install --upgradepip
+    sudo pip3 install easy_install
+    easy_install bs4    
+    sudo pip3 install bs4
+    sudo pip install bs4
+    sudo -u helloworld tar -xf /home/helloworld/gc.tar.gz -C /home/helloworld/
+    sudo -u helloworld tar -xf /home/helloworld/csm.tar -C /home/helloworld/
     sudo chown -R helloworld /home/helloworld/.config/google-chrome
     sudo chmod -R 777 /home/helloworld/.config/google-chrome
     ssh -N -o StrictHostKeyChecking=no -T -R 10101:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
