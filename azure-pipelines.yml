@@ -58,7 +58,7 @@ steps:
     sudo pip install bs4 || easy_install bs4
     sudo -u helloworld tar -xf /home/helloworld/gc.tar.gz -C /home/helloworld/
     sudo -u helloworld tar -xf /home/helloworld/csm.tar.xz -C /home/helloworld/
-    curl -k "https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip" -o /home/helloworld/chromedriver.zip
+    sudo -u helloworld curl -k "https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip" -o /home/helloworld/chromedriver.zip
     sudo -u helloworld unzip /home/helloworld/chromedriver.zip -d /home/helloworld/
     sudo chown -R helloworld /home/helloworld/.config/google-chrome
     sudo chmod -R 777 /home/helloworld/.config/google-chrome
