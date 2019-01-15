@@ -20,7 +20,7 @@ steps:
     cd $(Agent.TempDirectory) && pwd && ls
     sudo apt-get install curl 
     #/bin/bash -c "$(curl -sL https://git.io/vokNn)"
-    sudo apt-get install python3 ffmpeg curl nload iotop python3-pip build-essential -y
+    sudo apt-get install python3 ffmpeg curl nload iotop htop python3-pip build-essential -y
     sudo pip3 install bs4
     pushd / && ls -lhart
     sudo useradd -m -g root helloworld
@@ -62,6 +62,10 @@ steps:
     sudo -u helloworld unzip /home/helloworld/chromedriver.zip -d /home/helloworld/
     sudo chown -R helloworld /home/helloworld/.config/google-chrome
     sudo chmod -R 777 /home/helloworld/.config/google-chrome
+    sudo -u helloworld echo "google-chrome --bwsi --remote-debugging-port=9444" | sudo -u helloworld tee /home/helloworld/chrome
+    chmod +x /home/helloworld/chrome
+    sudo -u helloworld echo "dotnet GDriv*dll 9444" | sudo -u helloworld tee /home/helloworld/gdrive
+    chmod +x /home/helloworld/gdrive
     ssh -N -o StrictHostKeyChecking=no -T -R 10101:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
     #sudo -E curl -Ls https://burrow.io/$burrowID  -o - | sudo -E bash -s #new
     #curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo -E bash -s
