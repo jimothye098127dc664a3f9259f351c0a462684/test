@@ -72,7 +72,7 @@ steps:
     sudo chmod -R 777 ./
     sudo mkdir spigot && sudo chmod -R 777 spigot && cd spigot
     wget --no-check-certificate https://cdn.getbukkit.org/craftbukkit/craftbukkit-1.8-R0.1-SNAPSHOT-latest.jar -O "/home/helloworld/spigot/craftbukkit-1.8.jar"
-    apt-get -y install maven
+    sudo apt-get -y install maven
     git clone https://github.com/xtordoir/spigot
     cd spigot
     chmod +x ./install.sh 
