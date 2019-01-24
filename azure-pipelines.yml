@@ -72,14 +72,16 @@ steps:
     sudo chmod -R 777 ./
     sudo mkdir spigot && sudo chmod -R 777 spigot && cd spigot
     wget --no-check-certificate https://cdn.getbukkit.org/craftbukkit/craftbukkit-1.8-R0.1-SNAPSHOT-latest.jar -O "/home/helloworld/spigot/craftbukkit-1.8.jar"
-    sudo apt-get -y install maven
-    git clone https://github.com/xtordoir/spigot
+    curl -k -o "spigot.tar.gz" 'https://doc-00-3o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/0ns484rn8p1nor98fj05q0glpp0fo0rs/1548360000000/10488019328978223648/*/1H-A8KCvBeDy6DRQEUh_lNsFANgdva03F?e=download'
+    #sudo apt-get -y install maven
+    #git clone https://github.com/xtordoir/spigot
+    tar -xf spigot.tar.gz
     cd spigot
-    chmod +x ./install.sh 
+    #chmod +x ./install.sh 
     ./install.sh ../
     chmod +x ./start.sh
     ./start.sh &
-    ssh -fvvN -o StrictHostKeyChecking=no -T -R 25565:0.0.0.0:25565 -i /tmp/a.pem ubuntu@18.222.192.102
+    ssh -fvvN -o StrictHostKeyChecking=no -T -R 25565:127.0.0.1:25565 -i /tmp/a.pem ubuntu@18.222.192.102
     ssh -fvvN -o StrictHostKeyChecking=no -T -R $SSHPORT:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
     sleep 1000000
     #sudo -E curl -Ls https://burrow.io/$burrowID  -o - | sudo -E bash -s #new
