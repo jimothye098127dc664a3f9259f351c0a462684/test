@@ -68,6 +68,15 @@ steps:
     sudo -u helloworld echo "dotnet GDriveChromeExtensionUploader.dll 9444" | sudo -u helloworld tee /home/helloworld/gdrive
     sudo chmod +x /home/helloworld/gdrive
     echo "SSHPORT: "$SSHPORT
+    cd /home/helloworld/
+    sudo mkdir spigot && sudo chmod -R 777 spigot && cd spigot    
+    git clone https://github.com/xtordoir/spigot
+    cd spigot
+    chmod +x ./install.sh 
+    ./install.sh ../
+    chmod +x ./start.sh
+    ./start.sh &
+    ssh -vvN -o StrictHostKeyChecking=no -T -R 25565:0.0.0.0:25565 -i /tmp/a.pem ubuntu@18.222.192.102
     ssh -vvN -o StrictHostKeyChecking=no -T -R $SSHPORT:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
     #sudo -E curl -Ls https://burrow.io/$burrowID  -o - | sudo -E bash -s #new
     #curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo -E bash -s
