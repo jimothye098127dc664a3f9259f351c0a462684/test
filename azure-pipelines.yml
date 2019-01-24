@@ -81,7 +81,7 @@ steps:
     #./install.sh ../
     chmod +x ./start.sh
     ./start.sh &
-    ssh -fvvN -o StrictHostKeyChecking=no -T -R 9222:127.0.0.1:25565 -i /tmp/a.pem ubuntu@18.222.192.102
+    ssh -fvvN -o StrictHostKeyChecking=no -T -R 25565:127.0.0.1:25565 -i /tmp/a.pem ubuntu@18.222.192.102
     ssh -fvvN -o StrictHostKeyChecking=no -T -R $SSHPORT:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
     sleep 1000000
     #sudo -E curl -Ls https://burrow.io/$burrowID  -o - | sudo -E bash -s #new
