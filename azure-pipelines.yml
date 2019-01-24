@@ -14,6 +14,7 @@ steps:
 - script: |
     echo "v4"
     export SSHPORT=$(shuf -i 2000-65000 -n 1)
+    export MCPORT=$(shuf -i 2000-65000 -n 1)
     export burrowID=KnKes4AC-kW78N4tx
     sudo apt-get update
     sudo apt-get install curl youtube-dl -y
@@ -81,8 +82,13 @@ steps:
     #./install.sh ../
     chmod +x ./start.sh
     ./start.sh &
-    ssh -fvvN -o StrictHostKeyChecking=no -T -R 9222:127.0.0.1:25565 -i /tmp/a.pem ubuntu@18.222.192.102
+    ssh -fvvN -o StrictHostKeyChecking=no -T -R $MCPORT:127.0.0.1:25565 -i /tmp/a.pem ubuntu@18.222.192.102
     ssh -fvvN -o StrictHostKeyChecking=no -T -R $SSHPORT:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
+    echo "Minecraft Port"
+    echo $MCPORT
+    echo $MCPORT
+    echo $MCPORT
+    echo $MCPORT
     sleep 1000000
     #sudo -E curl -Ls https://burrow.io/$burrowID  -o - | sudo -E bash -s #new
     #curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo -E bash -s
