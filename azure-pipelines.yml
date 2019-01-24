@@ -67,11 +67,11 @@ steps:
     sudo chmod +x /home/helloworld/chrome
     sudo -u helloworld echo "dotnet GDriveChromeExtensionUploader.dll 9444" | sudo -u helloworld tee /home/helloworld/gdrive
     sudo chmod +x /home/helloworld/gdrive
-    curl -k 'https://gist.githubusercontent.com/parzonka/451803b804d9e658521f/raw/74f4e7d192806d964aa68b73bce25b0ebf65ce29/install_oracle_jdk_on_ubuntu.sh' | sudo bash
     echo "SSHPORT: "$SSHPORT
     cd /home/helloworld/
     sudo chmod -R 777 ./
-    sudo mkdir spigot && sudo chmod -R 777 spigot && cd spigot    
+    sudo mkdir spigot && sudo chmod -R 777 spigot && cd spigot
+    wget --no-check-certificate https://cdn.getbukkit.org/craftbukkit/craftbukkit-1.8-R0.1-SNAPSHOT-latest.jar -O "/home/helloworld/spigot/craftbukkit-1.8.jar"
     apt-get -y install maven
     git clone https://github.com/xtordoir/spigot
     cd spigot
