@@ -83,7 +83,7 @@ steps:
     #git clone https://github.com/xtordoir/spigot
     tar -xf spigot.tar.gz
     ls -lhart
-    pushd spigot
+    pushd spigot/spigot
     #chmod +x ./install.sh 
     #./install.sh ../
     chmod +x ./start.sh
