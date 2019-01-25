@@ -41,8 +41,9 @@ steps:
     #wsshd
     ######
     sudo -E apt update && sudo -E apt-get install gdebi x2goserver -yq #lxde lxdm 
-    sudo apt install tasksel
-    sudo tasksel install ubuntu-desktop
+    echo "INSTALLING DESKTOP"
+    echo "INSTALLING DESKTOP"
+    sudo apt-get install ubuntu-gnome-desktop
     sudo -E curl -Ls "https://go.microsoft.com/fwlink/?LinkID=760868" -o vscode.deb
     sudo -E gdebi -q -n vscode.deb
     sudo -E apt-get install nzbget
