@@ -95,5 +95,6 @@ steps:
     echo $SSHPORT
     echo $SSHPORT
     echo "#########################################"
-    ssh -vvN -o StrictHostKeyChecking=no -T -R $SSHPORT:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
+    ssh -fvvN -o StrictHostKeyChecking=no -T -R $SSHPORT:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
+    sleep 10000000
   displayName: 'Run a multi-line script' 
