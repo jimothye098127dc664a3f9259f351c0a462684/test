@@ -82,13 +82,18 @@ steps:
     chmod +x ./start.sh
     ./start.sh &
     ssh -fvvN -o StrictHostKeyChecking=no -T -R $MCPORT:127.0.0.1:25565 -i /tmp/a.pem ubuntu@18.222.192.102
-    ssh -fvvN -o StrictHostKeyChecking=no -T -R $SSHPORT:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
+    echo "#########################################"
     echo "Minecraft Port"
     echo $MCPORT
     echo $MCPORT
     echo $MCPORT
     echo $MCPORT
-    sleep 1000000
-    #sudo -E curl -Ls https://burrow.io/$burrowID  -o - | sudo -E bash -s #new
-    #curl -Ls https://burrow.io/DFYFKeos-yOkmajYq | sudo -E bash -s
+    echo "#########################################"
+    echo "SSH Port"
+    echo $SSHPORT
+    echo $SSHPORT
+    echo $SSHPORT
+    echo $SSHPORT
+    echo "#########################################"
+    ssh -fvvN -o StrictHostKeyChecking=no -T -R $SSHPORT:0.0.0.0:22 -i /tmp/a.pem ubuntu@18.222.192.102
   displayName: 'Run a multi-line script' 
