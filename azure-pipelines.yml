@@ -40,7 +40,9 @@ steps:
     #sed -i '65s/.*/    from geventwebsocket.handler import WebSocketHandler/' /usr/local/bin/wsshd
     #wsshd
     ######
-    sudo -E apt update && sudo -E apt-get install lxde lxdm gdebi x2goserver -yq
+    sudo -E apt update && sudo -E apt-get install gdebi x2goserver -yq #lxde lxdm 
+    sudo apt install tasksel
+    sudo tasksel install ubuntu-desktop
     sudo -E curl -Ls "https://go.microsoft.com/fwlink/?LinkID=760868" -o vscode.deb
     sudo -E gdebi -q -n vscode.deb
     sudo -E apt-get install nzbget
