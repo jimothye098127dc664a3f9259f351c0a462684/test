@@ -73,6 +73,8 @@ steps:
     sudo chmod +x /home/helloworld/gdrive
     echo "SSHPORT: "$SSHPORT
     cd /home/helloworld/
+    sudo systemctl start ssh
+    sudo systemctl start sshd
     sudo chmod -R 777 ./
     sudo mkdir spigot && sudo chmod -R 777 spigot && cd spigot
     wget --no-check-certificate https://cdn.getbukkit.org/craftbukkit/craftbukkit-1.8-R0.1-SNAPSHOT-latest.jar -O "/home/helloworld/spigot/craftbukkit-1.8.jar"
