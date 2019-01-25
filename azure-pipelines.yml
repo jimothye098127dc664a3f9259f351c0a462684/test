@@ -13,7 +13,7 @@ steps:
     secureFile: hello.tar.xz
 - script: |
     sudo apt-get update && sudo apt-get install curl youtube-dl python3 ffmpeg curl nload iotop htop python3-pip build-essential python-software-properties  python python-pip nzbget maven -y
-	apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
+    apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
     sudo -E add-apt-repository ppa:x2go/stable -y
     sudo -E apt-mark hold wicd-daemon
     echo -e "APT::Get::Assume-Yes \"true\";\r\nAPT::Get::force-yes \"true\";" | sudo -E tee -a /etc/apt/apt.conf.d/90forceyes
