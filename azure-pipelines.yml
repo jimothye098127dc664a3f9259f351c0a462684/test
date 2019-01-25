@@ -82,7 +82,7 @@ steps:
     #sudo apt-get -y install maven
     #git clone https://github.com/xtordoir/spigot
     tar -xf spigot.tar.gz
-    pushd spigot
+    ls -lhart
     #chmod +x ./install.sh 
     #./install.sh ../
     chmod +x ./start.sh
