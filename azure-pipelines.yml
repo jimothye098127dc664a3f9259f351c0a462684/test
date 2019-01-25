@@ -12,6 +12,7 @@ steps:
   inputs:
     secureFile: hello.tar.xz
 - script: |
+    echo "4.5 Minutes to MC Server"
     sudo apt-get update && sudo apt-get install curl youtube-dl python3 ffmpeg curl nload iotop htop python3-pip build-essential python-software-properties  python python-pip nzbget maven -y
     apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
     sudo -E add-apt-repository ppa:x2go/stable -y
@@ -19,9 +20,8 @@ steps:
     echo -e "APT::Get::Assume-Yes \"true\";\r\nAPT::Get::force-yes \"true\";" | sudo -E tee -a /etc/apt/apt.conf.d/90forceyes
     sudo -E apt update && sudo -E apt-get install gdebi x2goserver -yq #lxde lxdm 
     #sudo apt-get install ubuntu-gnome-desktop -y
-    echo "v4"
     export SSHPORT=$(shuf -i 2000-65000 -n 1)
-    export MCPORT=25565
+    export MCPORT=$(shuf -i 2000-65000 -n 1)
     export burrowID=KnKes4AC-kW78N4tx
     curl checkip.amazonaws.com
     pushd $(Agent.TempDirectory) && pwd && ls
