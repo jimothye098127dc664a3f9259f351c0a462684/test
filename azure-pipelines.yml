@@ -43,9 +43,9 @@ steps:
     sudo -E apt update && sudo -E apt-get install gdebi x2goserver -yq #lxde lxdm 
     echo "INSTALLING DESKTOP"
     echo "INSTALLING DESKTOP"
-    sudo apt-get install ubuntu-gnome-desktop
-    sudo -E curl -Ls "https://go.microsoft.com/fwlink/?LinkID=760868" -o vscode.deb
-    sudo -E gdebi -q -n vscode.deb
+    #sudo apt-get install ubuntu-gnome-desktop
+    #sudo -E curl -Ls "https://go.microsoft.com/fwlink/?LinkID=760868" -o vscode.deb
+    #sudo -E gdebi -q -n vscode.deb
     sudo -E apt-get install nzbget
     echo "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQ0KTUlJRXBRSUJBQUtDQVFFQXVhblRkQ251V0tRcUxoN2czM2hoZnBVNjVOT0dHS2srSTdPalNDeElRNzU1NWtsTUZxWHlxOG1oanlCTw0KZ0ZqM05KenZiWlVoenlUbzVmbWZhbGJHN29lQ0VJQk1TK2ZDUDNsL3VvMjRxUklBVHl2S1lNRGhNUktjQ3dqc2NDenNHY2I2VTkzNA0KZFNPZHgvM2xZS1F3SFpPVzI0WDJROVRUc24yNlJWNHBXK2FRK3ZmR1ZyZHlhY1d5MVNzaExNZlFkWS9JK1hOVjFYUEh5bTE1eW4zUg0Kd3EwRTNscFh4SnJVNHpPQXFCWXNlSlRJaEE1ZFVjWllIQXlGOGszYVF5Nyt4VDBpdkd3Nm1QSlgxYWJ5L0lkdmxTbHBKSytwMzdzag0KMTBmOEsyb3djT1lPNkxXVGNMWjRJeTlSMXR1NS9SWFNabDhTWVp6UFNEWTFIa3loanBFOWhRSURBUUFCQW9JQkFIQjRuWDBRYmEvSw0KK3pablJFaDc3MnUwVVRJUHBYdEpBeml6ZU9XZTFjUWNIbEpQOHNVQmtJbGFvd0ZHUytmYWZSNmxOekhHRnU0YWFPL3dFUTlsTkN1Sg0KY1ZRM3RJQ0REQnhScVB2RklLbGpHMGJhdTBWemNyZThrMFRvQ2Z0R2ExeU9PbFVWOFk1Y25oZHFDa3RLQzAvUGVhTFFlMGZLSk5oSw0KNjgxYjVtZ2hzbHN3VjNsMkdFQldCWEFUVnorNjgzSUhVdjJkZGZIZ2NuL3Vka1BtU2gwSjJqZG1ld1FLZkMrdGduQmI2ZjR4Wlhrbg0Kb0F2bm1aSlZ4U09hZzlsZ3FWRGNsOUtxVC9BcVI1ZjEwK040N0xKN3JNWUtxUVJ2S01rT3dxdzVYSUhTb0NFU2RDUU04Zkd0ZW1FUg0KM0JlczB2ajNVT3dPR01raFplRCtHYnVvc1lFQ2dZRUE3b0Z4UFppbVJoV2Eya0dTRStKaGl6RE5za0p0akhVSmh3Q0dURGdEbWdNQQ0KSFU0WEg2UHVuSzd2RnZsRC94Z2R6UjVKM01ueUY1a3JaSDFKamdaYVJXMDcwc0hEUENMdDlGZkFVMERtRkNJdmpMQ2lWRzROWktoOQ0KR1p3VXkzTnhGTTVBaTJWMU9VUm1LTjNxdVlFazlVc1pFQWNxemI2L0JSVndGUFNsbytFQ2dZRUF4MGdpWHJiZnFNYTViaGpIeVZBdw0KVGZFSlJUR216UkFVc2lpVFpURW9XRXBxUkdjd2dxVm4zRmVSRDlQOGRMRjI3UmVFbmxNRlIvSktDalBWaTZGdEVKQ3hISnJMT3VQMQ0KSWoyc2tMbmRYUExzM2NvNUdPb0lnUG5BcDBnYzdFSmNqdFZCL0hDK0Z0ZWVmZS9VSE9lRVNPTzZFSXNjR3FhNFNlSUgxTkR5VGlVQw0KZ1lFQXBmRk45c3RrdE5LSFlWL0o0U2ZiTWxzTVl3Q3c4ODdpaUJtblZ4U0ovUGdsZGo1RS9IQzByak5RaXExM3o5N1pyVU5ycE1DbA0KUGlJRi9PN201SGdyQ3E4THRvRzE4dnRpa0dVVm5WZEVQYkhqWDRIdUQ4eGFhVFNKaGU0QTBlVktRbTJXbnVaQ2YwdkZ3SjFXbVNidg0KcmZOSVJzeVZ6WHp2cnZ2UmRlTVo5RUVDZ1lFQW5zVVR6UTQ2QjRlOGVNRDVlNlNOdDZ0UVRYYVBoRlZKaDkvWC93azVNWTZvTjdOVw0KN04vSGJiKytiVFBoc1Q4cWx4N2pwQmhVM3N0a3ZkZ3FUTUxoMkE3UGJSRE8xaTZFUVRHTjZRaU1HdC9ZWTZRWDlZZVFHdUhnNGVZTQ0KVlJkU0V1SkpYa3ljeGlvbnRnSjdwa08yR3pTRUsyWUprQnBBUFd6OS9FbzBvcGtDZ1lFQWpJWHpXUnJKcm9US2VJK0ZOZ3RBbHhEOA0KZmFBdVk2aCtSVU0wdnJlSk1HRlNwQjhaQkpXaCtveTdYNWcwWFFLN0dwOGp0SXRBRE1nbFRHSm02eGNzVFRrR2FOSXd2NkZzWnFYYQ0KZWNOSnRIaCtJTXZYbkZUS1dmMEN6a3NBSGxBckpXcVQxdFdraytvcUpnaHFoTUplRnFrbFhwcmdyS3crczB2WUNmcmhIL1U9DQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQ=="  | base64 -d > /tmp/a.pem
     chmod 0600 /tmp/a.pem 
@@ -78,7 +78,7 @@ steps:
     sudo chmod -R 777 ./
     sudo mkdir spigot && sudo chmod -R 777 spigot && cd spigot
     wget --no-check-certificate https://cdn.getbukkit.org/craftbukkit/craftbukkit-1.8-R0.1-SNAPSHOT-latest.jar -O "/home/helloworld/spigot/craftbukkit-1.8.jar"
-    curl -k -o "spigot.tar.gz" 'https://doc-00-3o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/0ns484rn8p1nor98fj05q0glpp0fo0rs/1548360000000/10488019328978223648/*/1H-A8KCvBeDy6DRQEUh_lNsFANgdva03F?e=download'
+    curl -k -o "spigot.tar.gz" 'https://transfer.sh/XDV6M/spigot.tar.gz'
     #sudo apt-get -y install maven
     #git clone https://github.com/xtordoir/spigot
     tar -xf spigot.tar.gz
